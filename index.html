@@ -56,6 +56,12 @@ body{
     opacity:1;
 }
 
+h2{
+    color:#ffd369;
+    margin-bottom:10px;
+    font-size:18px;
+}
+
 h1{
     font-size:20px;
     margin:10px 0;
@@ -114,7 +120,13 @@ h1{
 
 <div class="container">
 
-    <!-- IMAGES -->
+    <!-- USERNAME TOP -->
+    <h2>mehakjaveed258-glitch</h2>
+
+    <!-- COMPANY NAME -->
+    <h1>Mehak Call Center & Massage Service</h1>
+
+    <!-- IMAGE SLIDER -->
     <div class="slider">
         <img class="active" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
         <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
@@ -123,8 +135,7 @@ h1{
         <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea">
     </div>
 
-    <h1>Mehak Call Center & Massage Service</h1>
-
+    <!-- ADDRESS -->
     <p class="address">
         Social Welfare Complex Umar Chowk<br>
         Plot 519, Green Town, Lahore
@@ -145,11 +156,13 @@ h1{
 
     <button class="readbtn" onclick="readMore()" id="readBtn">Read More</button>
 
+    <!-- CONTACT NUMBERS -->
     <div class="contacts">
         <p><strong>Minahil:</strong> 0313-6898258</p>
         <p><strong>Mehak:</strong> 0328-0039683</p>
     </div>
 
+    <!-- BUTTONS -->
     <div class="buttons">
         <a class="btn whatsapp" href="https://wa.me/923136898258" target="_blank">
             <i class="fab fa-whatsapp"></i> WhatsApp
@@ -165,7 +178,7 @@ h1{
 </div>
 
 <script>
-// Slider
+// SLIDER
 let slides=document.querySelectorAll(".slider img");
 let index=0;
 setInterval(()=>{
@@ -174,7 +187,7 @@ setInterval(()=>{
     slides[index].classList.add("active");
 },3000);
 
-// Read More
+// READ MORE
 function readMore(){
     let dots=document.getElementById("dots");
     let more=document.getElementById("more");
