@@ -3,157 +3,133 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mehak Call Center & Massage Service</title>
+<title>Mehak Javeed Marketing – International Marketing Solutions</title>
 
-<!-- Font Awesome for icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-/* RESET + BODY */
-*{margin:0; padding:0; box-sizing:border-box;}
+*{margin:0;padding:0;box-sizing:border-box;}
 body{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:white;
-    min-height:100vh;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#0a0f2c,#1b1f4a,#2e317a);
+    color:#fff;
 }
-
-/* CONTAINER */
 .container{
-    max-width:900px;
+    max-width:1000px;
     margin:40px auto;
-    background:rgba(255,255,255,0.1);
-    backdrop-filter:blur(12px);
-    border-radius:20px;
-    padding:30px;
-    box-shadow:0 25px 50px rgba(0,0,0,0.6);
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 30px 60px rgba(0,0,0,0.7);
 }
-
-/* USERNAME + COMPANY */
 .username{
     text-align:center;
+    color:#ffcc70;
     font-size:22px;
     font-weight:bold;
-    color:#ffd369;
-    margin-bottom:5px;
 }
 .company-name{
     text-align:center;
-    font-size:28px;
-    font-weight:bold;
-    margin-bottom:20px;
+    font-size:32px;
+    font-weight:800;
+    margin:10px 0 25px;
 }
 
-/* IMAGE SLIDER */
+/* SLIDER */
 .slider{
     position:relative;
-    width:100%;
-    height:300px;
-    border-radius:15px;
+    height:320px;
+    border-radius:20px;
     overflow:hidden;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 .slider img{
+    position:absolute;
     width:100%;
     height:100%;
     object-fit:cover;
-    position:absolute;
     opacity:0;
     transition:1s;
-    border-radius:15px;
 }
-.slider img.active{
-    opacity:1;
-}
+.slider img.active{opacity:1;}
 
 /* ADDRESS */
 .address{
     text-align:center;
-    font-size:16px;
-    margin-bottom:15px;
     opacity:0.9;
+    margin-bottom:25px;
 }
 
-/* READ MORE SECTION */
-.about{
-    font-size:16px;
-    line-height:1.6;
-    margin-bottom:20px;
+/* CONTENT */
+.section{
+    margin-bottom:35px;
 }
-#more{display:none;}
-.readbtn{
-    background:#ffd369;
-    color:#000;
-    border:none;
-    padding:8px 18px;
-    border-radius:25px;
-    cursor:pointer;
-    font-weight:bold;
+.section h2{
+    color:#ffcc70;
+    margin-bottom:15px;
+}
+.section p{
+    line-height:1.8;
+    opacity:0.95;
+    margin-bottom:15px;
+}
+
+/* SERVICES */
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+.service-card{
+    background:rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.5);
     transition:0.3s;
 }
-.readbtn:hover{
-    transform:scale(1.05);
-}
+.service-card:hover{transform:translateY(-8px);}
 
-/* CONTACT CARDS */
+/* CONTACT */
 .contacts{
     display:flex;
-    justify-content:space-around;
+    justify-content:center;
     flex-wrap:wrap;
-    margin-bottom:20px;
+    gap:15px;
+    margin-bottom:25px;
 }
 .contact-card{
     background:rgba(255,255,255,0.1);
-    padding:15px 20px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.5);
-    margin:10px;
-    flex:1 1 200px;
+    padding:18px 25px;
+    border-radius:18px;
     text-align:center;
-    transition:0.3s;
-}
-.contact-card:hover{
-    transform:scale(1.05);
 }
 
 /* BUTTONS */
 .buttons{
     display:flex;
     justify-content:center;
+    gap:20px;
     flex-wrap:wrap;
-    gap:15px;
 }
 .btn{
+    padding:14px 26px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    color:#fff;
     display:flex;
     align-items:center;
-    justify-content:center;
-    gap:8px;
-    padding:12px 22px;
-    border-radius:30px;
-    font-weight:bold;
-    text-decoration:none;
-    color:white;
+    gap:10px;
     transition:0.3s;
 }
-.btn i{font-size:18px;}
 .whatsapp{background:#25D366;}
 .location{background:#ff4d4d;}
-.btn:hover{
-    transform:scale(1.1);
-    opacity:0.9;
-}
+.btn:hover{transform:scale(1.1);opacity:0.9;}
 
-/* RESPONSIVE */
 @media(max-width:768px){
-    .slider{height:200px;}
-    .company-name{font-size:24px;}
-    .username{font-size:20px;}
-}
-@media(max-width:480px){
-    .slider{height:180px;}
-    .company-name{font-size:20px;}
-    .username{font-size:18px;}
-    .contact-card{flex:1 1 100%;}
+    .slider{height:220px;}
+    .company-name{font-size:26px;}
 }
 </style>
 </head>
@@ -161,83 +137,80 @@ body{
 <body>
 <div class="container">
 
-    <!-- USERNAME + COMPANY -->
-    <div class="username">mehakjaveed258-glitch</div>
-    <div class="company-name">Mehak Call Center & Massage Service</div>
+<div class="username">mehakjaveed258-glitch</div>
+<div class="company-name">Mehak Javeed Marketing</div>
 
-    <!-- IMAGE SLIDER -->
-    <div class="slider">
-        <img class="active" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
-        <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
-        <img src="https://images.unsplash.com/photo-1590650153855-d9e808231d41">
-        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf">
-        <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea">
-    </div>
+<div class="slider">
+<img class="active" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+<img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
+<img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+</div>
 
-    <!-- ADDRESS -->
-    <div class="address">
-        Social Welfare Complex Umar Chowk, Plot 519, Green Town, Lahore
-    </div>
+<div class="address">
+Social Welfare Complex Umar Chowk, Plot 519, Green Town, Lahore
+</div>
 
-    <!-- READ MORE -->
-    <div class="about">
-        Mehak Call Center & Massage Service ek professional company hai
-        jo customer satisfaction par focus karti hai
-        <span id="dots">...</span>
-        <span id="more">
-        Hum call center solutions, customer support,
-        aur professional massage services provide karte hain
-        trained staff ke sath. Safe aur hygienic environment
-        hamari priority hai. Humari team trained professionals se bhari hai aur
-        har client ko personalized attention di jati hai.
-        </span>
-    </div>
-    <button class="readbtn" onclick="readMore()" id="readBtn">Read More</button>
+<!-- ABOUT PAGE 1 -->
+<div class="section">
+<h2>About Mehak Javeed Marketing</h2>
+<p>
+Mehak Javeed Marketing ek professional aur international level ki marketing company hai jo businesses ko global market me grow karne me madad karti hai. Hum modern digital strategies, creative branding aur result-oriented marketing solutions provide karte hain.
+</p>
+<p>
+Hamari company ka vision yeh hai ke Pakistan se international clients tak high-quality marketing services deliver ki jayein. Chahe aap startup ho ya established brand — hum aapke business ko next level par le jate hain.
+</p>
+</div>
 
-    <!-- CONTACT CARDS -->
-    <div class="contacts">
-        <div class="contact-card"><strong>Minahil</strong><br>0313-6898258</div>
-        <div class="contact-card"><strong>Mehak</strong><br>0328-0039683</div>
-    </div>
+<!-- ABOUT PAGE 2 -->
+<div class="section">
+<h2>Our Mission & Vision</h2>
+<p>
+Hamari mission hai har client ko personalized marketing solutions dena jo unke business goals ke mutabiq ho. Hum transparency, trust aur performance par believe rakhte hain.
+</p>
+<p>
+Vision yeh hai ke Mehak Javeed Marketing ko ek globally trusted marketing brand banaya jaye jo innovation aur excellence ki misaal ho.
+</p>
+</div>
 
-    <!-- BUTTONS -->
-    <div class="buttons">
-        <a class="btn whatsapp" href="https://wa.me/923136898258" target="_blank">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-        <a class="btn location" href="https://www.google.com/maps/search/?api=1&query=Social+Welfare+Complex+Umar+Chowk+Green+Town+Lahore" target="_blank">
-            <i class="fas fa-location-dot"></i> Direction
-        </a>
-    </div>
+<!-- SERVICES -->
+<div class="section">
+<h2>Our Marketing Services</h2>
+<div class="services">
+<div class="service-card">Digital Marketing (Facebook, Instagram, Google Ads)</div>
+<div class="service-card">International Lead Generation</div>
+<div class="service-card">Branding & Business Identity</div>
+<div class="service-card">Social Media Management</div>
+<div class="service-card">SEO & Website Promotion</div>
+<div class="service-card">Call Center Marketing Campaigns</div>
+</div>
+</div>
+
+<!-- CONTACT -->
+<div class="contacts">
+<div class="contact-card"><strong>Minahil</strong><br>0313-6898258</div>
+<div class="contact-card"><strong>Mehak</strong><br>0328-0039683</div>
+</div>
+
+<div class="buttons">
+<a class="btn whatsapp" href="https://wa.me/923136898258" target="_blank">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+<a class="btn location" href="https://www.google.com/maps/search/?api=1&query=Social+Welfare+Complex+Umar+Chowk+Green+Town+Lahore" target="_blank">
+<i class="fas fa-location-dot"></i> Direction
+</a>
+</div>
 
 </div>
 
 <script>
-// SLIDER
 let slides=document.querySelectorAll(".slider img");
 let index=0;
 setInterval(()=>{
-    slides[index].classList.remove("active");
-    index=(index+1)%slides.length;
-    slides[index].classList.add("active");
+slides[index].classList.remove("active");
+index=(index+1)%slides.length;
+slides[index].classList.add("active");
 },3000);
-
-// READ MORE
-function readMore(){
-    let dots=document.getElementById("dots");
-    let more=document.getElementById("more");
-    let btn=document.getElementById("readBtn");
-
-    if(dots.style.display==="none"){
-        dots.style.display="inline";
-        btn.innerHTML="Read More";
-        more.style.display="none";
-    }else{
-        dots.style.display="none";
-        btn.innerHTML="Read Less";
-        more.style.display="inline";
-    }
-}
 </script>
 
 </body>
